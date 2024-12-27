@@ -229,7 +229,7 @@ for (i in 1:nrow(tri)) {
 # write to csv file
 write_csv(merge, "/Users/sunpierce/Desktop/Academia Sinica/gw_project/Ver.2.1/DataTemp/neighbor_triangle_averaged_water_level_data.csv")
 
-
+# Processing step 6 is necessary for other version in ver.2 (sorted_combination_freq_whole)
 #### Step 6: Calculating occurrences for each combination (denominator) ####
 # Read the data
 center = read.csv("/Users/sunpierce/Desktop/Academia Sinica/gw_project/Ver.2.1/DataTemp/averaged_triangle_water_level_data.csv")
@@ -333,7 +333,7 @@ print(sorted_combination_freq_whole)
 
 #### Step 7: Lag 1 ####
 # Read data
-earthquake = read.csv("/Users/sunpierce/Desktop/Academia Sinica/gw_project/Ver.2.1/DataTemp/earthquake_in_triangle_ver.2.1_2.5_1e-3.csv")
+earthquake = read.csv("/Users/sunpierce/Desktop/Academia Sinica/gw_project/Ver.2.4/DataTemp/earthquake_in_triangle_ver.2.4_4_1e-3.csv")
 
 # Add a new column 'HourBlock' based on the 'Hour' values
 earthquake$HourBlock <- cut(earthquake$Hour,
@@ -420,7 +420,7 @@ t = table(earthquake$tri_ID)
 t = as.data.frame(t)
 t = t[order(t$Freq, decreasing = T),]
 occurrence = data.frame(Tri_ID = t$Var1, Occurrence = t$Freq)
-write_csv(occurrence, "/Users/sunpierce/Desktop/Academia Sinica/gw_project/Occurrence_ver.2.1.csv")
+write_csv(occurrence, "/Users/sunpierce/Desktop/Academia Sinica/gw_project/Occurrence_ver.2.2.csv")
 
 # Calculate the frequency
 # Step 1: Create a vector of combinations (t, n)
@@ -453,7 +453,7 @@ print(sorted_combination_freq_lag1)
 
 #### Step 8: Lag 2 ####
 # Read data
-earthquake = read.csv("/Users/sunpierce/Desktop/Academia Sinica/gw_project/Ver.2.1/DataTemp/earthquake_in_triangle_ver.2.1_2.5_1e-3.csv")
+earthquake = read.csv("/Users/sunpierce/Desktop/Academia Sinica/gw_project/Ver.2.4/DataTemp/earthquake_in_triangle_ver.2.4_4_1e-3.csv")
 
 # Add a new column 'HourBlock' based on the 'Hour' values
 earthquake$HourBlock <- cut(earthquake$Hour,
@@ -569,7 +569,7 @@ print(sorted_combination_freq_lag2)
 
 #### Step 9: Lag 3 ####
 # Read data
-earthquake = read.csv("/Users/sunpierce/Desktop/Academia Sinica/gw_project/Ver.2.1/DataTemp/earthquake_in_triangle_ver.2.1_2.5_1e-3.csv")
+earthquake = read.csv("/Users/sunpierce/Desktop/Academia Sinica/gw_project/Ver.2.4/DataTemp/earthquake_in_triangle_ver.2.4_4_1e-3.csv")
 
 # Add a new column 'HourBlock' based on the 'Hour' values
 earthquake$HourBlock <- cut(earthquake$Hour,
@@ -680,13 +680,9 @@ sorted_combination_freq_lag3 = sorted_combination_freq_lag3[-nrow(sorted_combina
 print(sorted_combination_freq_lag3)
 
 
-
-
-
-
 #### Step 10: Lag 4 ####
 # Read data
-earthquake = read.csv("/Users/sunpierce/Desktop/Academia Sinica/gw_project/Ver.2.1/DataTemp/earthquake_in_triangle_ver.2.1_2.5_1e-3.csv")
+earthquake = read.csv("/Users/sunpierce/Desktop/Academia Sinica/gw_project/Ver.2.4/DataTemp/earthquake_in_triangle_ver.2.4_4_1e-3.csv")
 
 # Add a new column 'HourBlock' based on the 'Hour' values
 earthquake$HourBlock <- cut(earthquake$Hour,
@@ -799,7 +795,7 @@ print(sorted_combination_freq_lag4)
 
 #### Step 11: Lag 5 ####
 # Read data
-earthquake = read.csv("/Users/sunpierce/Desktop/Academia Sinica/gw_project/Ver.2.1/DataTemp/earthquake_in_triangle_ver.2.1_2.5_1e-3.csv")
+earthquake = read.csv("/Users/sunpierce/Desktop/Academia Sinica/gw_project/Ver.2.4/DataTemp/earthquake_in_triangle_ver.2.4_4_1e-3.csv")
 
 # Add a new column 'HourBlock' based on the 'Hour' values
 earthquake$HourBlock <- cut(earthquake$Hour,
@@ -911,7 +907,7 @@ print(sorted_combination_freq_lag5)
 
 #### Step 12: Lag 6 ####
 # Read data
-earthquake = read.csv("/Users/sunpierce/Desktop/Academia Sinica/gw_project/Ver.2.1/DataTemp/earthquake_in_triangle_ver.2.1_2.5_1e-3.csv")
+earthquake = read.csv("/Users/sunpierce/Desktop/Academia Sinica/gw_project/Ver.2.4/DataTemp/earthquake_in_triangle_ver.2.4_4_1e-3.csv")
 
 # Add a new column 'HourBlock' based on the 'Hour' values
 earthquake$HourBlock <- cut(earthquake$Hour,
@@ -1021,7 +1017,7 @@ print(sorted_combination_freq_lag6)
 
 #### Step 13: Lag 7 ####
 # Read data
-earthquake = read.csv("/Users/sunpierce/Desktop/Academia Sinica/gw_project/Ver.2.1/DataTemp/earthquake_in_triangle_ver.2.1_2.5_1e-3.csv")
+earthquake = read.csv("/Users/sunpierce/Desktop/Academia Sinica/gw_project/Ver.2.4/DataTemp/earthquake_in_triangle_ver.2.4_4_1e-3.csv")
 
 # Add a new column 'HourBlock' based on the 'Hour' values
 earthquake$HourBlock <- cut(earthquake$Hour,
@@ -1131,7 +1127,7 @@ print(sorted_combination_freq_lag7)
 
 #### Step 14: Lag 8 ####
 # Read data
-earthquake = read.csv("/Users/sunpierce/Desktop/Academia Sinica/gw_project/Ver.2.1/DataTemp/earthquake_in_triangle_ver.2.1_2.5_1e-3.csv")
+earthquake = read.csv("/Users/sunpierce/Desktop/Academia Sinica/gw_project/Ver.2.4/DataTemp/earthquake_in_triangle_ver.2.4_4_1e-3.csv")
 
 # Add a new column 'HourBlock' based on the 'Hour' values
 earthquake$HourBlock <- cut(earthquake$Hour,
@@ -1241,7 +1237,7 @@ print(sorted_combination_freq_lag8)
 
 #### Step 15: Lag 9 ####
 # Read data
-earthquake = read.csv("/Users/sunpierce/Desktop/Academia Sinica/gw_project/Ver.2.1/DataTemp/earthquake_in_triangle_ver.2.1_2.5_1e-3.csv")
+earthquake = read.csv("/Users/sunpierce/Desktop/Academia Sinica/gw_project/Ver.2.4/DataTemp/earthquake_in_triangle_ver.2.4_4_1e-3.csv")
 
 # Add a new column 'HourBlock' based on the 'Hour' values
 earthquake$HourBlock <- cut(earthquake$Hour,
@@ -1451,26 +1447,26 @@ head(prob_lag1_lag9[order(prob_lag1_lag9$probability, decreasing = T),])
 df <- prob_lag1_lag3[-nrow(prob_lag1_lag3),]
 df <- df %>%
   separate(combination, into = c("center", "neighbor"), sep = "_")
-write_csv(df, "/Users/sunpierce/Desktop/Academia Sinica/gw_project/Prob_cyc_lag1_lag3_ver.2.csv")
+write_csv(df, "/Users/sunpierce/Desktop/Academia Sinica/gw_project/Prob_cyc_lag1_lag3_ver.2.4.csv")
 df <- prob_lag1_lag5[-nrow(prob_lag1_lag5),]
 df <- df %>%
   separate(combination, into = c("center", "neighbor"), sep = "_")
-write_csv(df, "/Users/sunpierce/Desktop/Academia Sinica/gw_project/Prob_cyc_lag1_lag5_ver.2.csv")
+write_csv(df, "/Users/sunpierce/Desktop/Academia Sinica/gw_project/Prob_cyc_lag1_lag5_ver.2.4.csv")
 df <- prob_lag1_lag7[-nrow(prob_lag1_lag7),]
 df <- df %>%
   separate(combination, into = c("center", "neighbor"), sep = "_")
-write_csv(df, "/Users/sunpierce/Desktop/Academia Sinica/gw_project/Prob_cyc_lag1_lag7_ver.2.csv")
+write_csv(df, "/Users/sunpierce/Desktop/Academia Sinica/gw_project/Prob_cyc_lag1_lag7_ver.2.4.csv")
 df <- prob_lag1_lag9[-nrow(prob_lag1_lag9),]
 df <- df %>%
   separate(combination, into = c("center", "neighbor"), sep = "_")
-write_csv(df, "/Users/sunpierce/Desktop/Academia Sinica/gw_project/Prob_cyc_lag1_lag9_ver.2.csv")
+write_csv(df, "/Users/sunpierce/Desktop/Academia Sinica/gw_project/Prob_cyc_lag1_lag9_ver.2.4.csv")
 
 
 #### Demo ####
-df1 = read.csv("/Users/sunpierce/Desktop/Academia Sinica/gw_project/Prob_cyc_lag1_lag3_ver.2.1.csv")
-df2 = read.csv("/Users/sunpierce/Desktop/Academia Sinica/gw_project/Prob_cyc_lag1_lag5_ver.2.1.csv")
-df3 = read.csv("/Users/sunpierce/Desktop/Academia Sinica/gw_project/Prob_cyc_lag1_lag7_ver.2.1.csv")
-df4 = read.csv("/Users/sunpierce/Desktop/Academia Sinica/gw_project/Prob_cyc_lag1_lag9_ver.2.1.csv")
+df1 = read.csv("/Users/sunpierce/Desktop/Academia Sinica/gw_project/Prob_cyc_lag1_lag3_ver.2.4.csv")
+df2 = read.csv("/Users/sunpierce/Desktop/Academia Sinica/gw_project/Prob_cyc_lag1_lag5_ver.2.4.csv")
+df3 = read.csv("/Users/sunpierce/Desktop/Academia Sinica/gw_project/Prob_cyc_lag1_lag7_ver.2.4.csv")
+df4 = read.csv("/Users/sunpierce/Desktop/Academia Sinica/gw_project/Prob_cyc_lag1_lag9_ver.2.4.csv")
 
 head(df1[order(df1$probability, decreasing = T),])
 head(df2[order(df2$probability, decreasing = T),])
